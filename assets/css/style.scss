@@ -496,12 +496,14 @@ vertical-align:baseline;
 font-size:20pt;
 font-family:serif}
 
-.c9{padding-top:0pt;
-padding-bottom:0pt;
-line-height:1.15;
-orphans:2;
-widows:2;
-text-align:center}
+.figure {
+    padding-top:0pt;
+    padding-bottom:0pt;
+    line-height:1.15;
+    orphans:2;
+    widows:2;
+    text-align:center
+}
 
 .c56{color:#000000;
 font-weight:400;
@@ -535,20 +537,24 @@ padding-bottom:10pt;
 line-height:1.15;
 text-align:left}
 
-.c3{padding-top:0pt;
-padding-bottom:0pt;
-line-height:1.0;
-text-align:left}
+.table-text {
+    padding-top:0pt;
+    padding-bottom:0pt;
+    line-height:1.0;
+    text-align:left
+}
 
 .c55{padding-top:0pt;
 padding-bottom:16pt;
 line-height:1.15;
 text-align:left}
 
-.c34{padding-top:0pt;
-padding-bottom:10pt;
-line-height:1.15;
-text-align:center}
+.fig-caption {
+    padding-top:0pt;
+    padding-bottom:10pt;
+    line-height:1.15;
+    text-align:center
+}
 
 .c54{padding-top:0pt;
 padding-bottom:3pt;
@@ -604,9 +610,6 @@ margin:0}
 
 .c20{margin-left:72pt;
 padding-left:0pt}
-
-.c13{orphans:2;
-widows:2}
 
 .c17{margin-left:36pt;
 padding-left:0pt}
@@ -728,4 +731,8 @@ font-style:italic;
 orphans:2;
 widows:2;
 text-align:left
+}
+
+.footnotes > p {
+    line-height: 1.4;
 }
