@@ -580,7 +580,6 @@ height:1px}
 .c16{page-break-after:avoid}
 .c29{color:#0000ff}
 .c47{font-style:normal}
-.c35{margin-left:216pt}
 .c37{height:16pt}
 .c32{font-family:monospace}
 .c5{font-weight:700}
@@ -594,7 +593,6 @@ height:1px}
 }
 
 .c15{font-size:9pt}
-.c39{height:11pt}
 .c43{font-size:16pt}
 
 .title{padding-top:0pt;
@@ -696,11 +694,23 @@ widows:2;
 text-align:left
 }
 
-p ~ p {
-    margin-top: 12pt;
+p ~ ol, ol > li ~ li {
+    margin-top: 6pt;
+}
+
+p {
+    margin: 6pt 0;
+}
+
+ol {
+    margin-left: 24pt;
 }
 
 .footnotes > p {
     line-height: 1.4;
     margin-top: 3pt;
+}
+
+.signature {
+    margin: 0 0 0 216pt;
 }
