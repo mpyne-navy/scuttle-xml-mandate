@@ -12,14 +12,14 @@ title: Sounding the &lt;DANGER/&gt; signal
 <p>This choice has several serious issues that will make it unworkable for Navy usage:</p>
 
 <ul>
-  <li>XML is complicated for computers to read and understand. Its complexity has caused <b>serious security issues</b> over the years which has made XML a <b>“Top 10” Web security threat</b>.</li>
-  <li>The commercial cloud <b>scalable databases</b> and ‘Big data’ <b>analytics services</b> we would migrate to in C2C24 do not natively support XML, instead preferring JSON. This will <b>force Navy to build custom</b> applications and systems just to handle XML when we could otherwise have used cloud services. This also <b>forces Navy to secure and accredit</b> these systems for use, at substantial cost.</li>
-  <li>Mandating sole use of XML will cause <b>significant</b> <b>recruiting and retention issues</b> in a critical personnel specialty, that will be sorely required to meet <em>Design for Maintaining Maritime Superiority 2.0</em> requirements for data-driven decision making and use of AI &amp; machine learning. We compete with a <b>voracious private sector</b> for IT talent and should not self-inflict problems.</li>
-  <li>Standardizing on XML provides <b>no data standardization benefit</b> that is not also provided by commercially-relevant alternatives like JSON. If it did, there would be more commercial usage, but <b>only 4.4% of web page requests</b> in Google’s metrics <b>use XML</b> for data transfer.</li>
-  <li>XML produces data <b>too large for IT networks</b> to send afloat. The EXI compression solution offered as a fix has no commercial adoption, and doesn’t address the bulk of non-XML data that would be transferred for Web applications. <b>Modern Web compression solves this problem</b> for all uncompressed data, is <b>already available afloat</b> today, and works best on non-XML data.</li>
+  <li>XML is complicated for computers to read and understand. Its complexity has caused <a href="#h.5cvn6ljnzqky"><b>serious security issues</b></a> over the years which has made XML a <b>“Top 10” Web security threat</b>.</li>
+  <li>The commercial cloud <b>scalable databases</b> and ‘Big data’ <b>analytics services</b> we would migrate to in C2C24 do not natively support XML, instead preferring JSON. This will <a href="#h.617xpe6pnxb4"><b>force Navy to build custom</b></a> applications and systems just to handle XML when we could otherwise have used cloud services. This also <b>forces Navy to secure and accredit</b> these systems for use, at substantial cost.</li>
+  <li>Mandating sole use of XML will cause <b>significant</b> <a href="#h.wouaj55p7up"><b>recruiting and retention issues</b></a> in a critical personnel specialty, that will be sorely required to meet <em>Design for Maintaining Maritime Superiority 2.0</em> requirements for data-driven decision making and use of AI &amp; machine learning. We compete with a <b>voracious private sector</b> for IT talent and should not self-inflict problems.</li>
+  <li>Standardizing on XML provides <a href="#h.xz6dvpts6jug"><b>no data standardization benefit</b></a> that is not also provided by commercially-relevant alternatives like JSON. If it did, there would be more commercial usage, but <b>only 4.4% of web page requests</b> in Google’s metrics <b>use XML</b> for data transfer.</li>
+  <li>XML produces data <b>too large for IT networks</b> to send afloat. The EXI compression solution offered as a fix has no commercial adoption, and doesn’t address the bulk of non-XML data that would be transferred for Web applications. <a href="#h.5rtzashin05a"><b>Modern Web compression solves this problem</b></a> for all uncompressed data, is <b>already available afloat</b> today, and works best on non-XML data.</li>
 </ul>
 
-<p>Many arguments have been offered in support of XML, but these arguments, by their own logic of seeking commercially-popular and standardized solutions, are even more supportive of XML alternatives. <em>If we are truly going to emulate the likes of Google, Amazon and Microsoft and use commercial best practice, then we can’t standardize on XML alone</em>.</p>
+<p>Many arguments have been offered in support of XML, but these arguments, by their own logic of seeking commercially-popular and standardized solutions, are <a href="#h.cdec86gb0aay">even more supportive of XML alternatives</a>. <em>If we are truly going to emulate the likes of Google, Amazon and Microsoft and use commercial best practice, then we can’t standardize on XML alone</em>.</p>
 
 <h1 id="h.2c2z4kmgqzri">Introduction</h1>
 <p>The Navy is faced with perhaps the most complex IT environment of any of the U.S. armed forces, operating networks that must routinely be disconnected from the DoD Information Network (DoDIN), and from the public Internet, while still being able to connect to nearby joint forces. This problem would be bad enough, but significant policy barriers, lengthy acquisition processes, and routine underinvestment in modern IT has created an environment in which the Navy struggles to enjoy the benefit of the “cloud” age of computing.</p>
@@ -34,21 +34,13 @@ title: Sounding the &lt;DANGER/&gt; signal
 <p>This is all to say that this paper may read like an attack on XML generally, but that’s not really my intent. XML itself has use cases for which it is a fine alternative, and often even the best alternative (yes, even now in 2019). In fact my initial drafts on this paper were even written in a language (Asciidoc) that helps generates XML for subsequent editing, because computer-readable “tagging” of human-authored documents continues to be a strong suit for XML. I have personal and open-source projects that use XML and will continue to do so. I am not arguing that XML should be sought and eradicated on sight.</p>
 <p>In fact, XML is directly responsible for a great deal of the migration of modern computing from a glut of custom protocols where computers and networks couldn’t talk to each other, into a “Internet” of networks that form the Web ecosystem that has generated incredible value for the world.</p>
 <p>As we’ll see, the aspirations of XML’s developers were even broader, and they didn’t meet them all. But any computer scientist would (and should) be proud to have been involved in developing and popularizing XML—it has truly changed the world, for the better. All the same, it is but a step of the ladder along the way to the modern cloud-native ecosystem, and it is important that the Navy doesn’t tie itself to this step and prevent progress from continuing to climb that ladder where appropriate for our mission sets.</p>
-<p>I described in the Executive Summary the five major reasons I see of course in the Navy context:</p>
-
-<ol class=" lst-kix_cuccmufq2tm3-0 start" start="1">
-  <li>XML is a “Top 10 Web Security Threat” due to its inherent complexity</li>
-  <li>The commercial cloud doesn’t support sole use of XML; we have to use other formats too</li>
-  <li>Mandating XML will harm IT recruiting and retention</li>
-  <li>XML adoption alone doesn’t really solve the data standardization issues we have</li>
-  <li>XML is too bloated for Navy use; the proposed “EXI” solution would be effectively proprietary to DoD as it has not gained even minimal usage in the commercial cloud despite a decade-plus of time to standardize and a decade-plus of effort from research at Naval Postgraduate School.</li>
-</ol>
-
+<p>As I described in the Executive Summary, I do see serious issues with the idea of using XML and nothing but XML, as I will go on to laboriously describe. But I don't want this to be taken as a screed against XML, as much as a screed against picking bad tools for problems using the 10-million-mile screwdriver from the Beltway and Monterey.</p>
 <p>The Navy will benefit by cleaning up our data story even if some systems use XML. But a mandate for <em>sole use of XML</em> is the wrong way to go about cleaning up our data and will greatly complicate the development and operation of services where XML doesn’t cleanly fit.</p>
+
 <h1 id="h.725jw9ieg8rr">The Problems with the XML Mandate</h1>
 <h2 id="h.5cvn6ljnzqky">Cybersecurity</h2>
 
-<p>XML is a highly complicated standard for data, intended to permit computers to “read into” information written by humans by defining a ‘markup’ that computers could easily understand.<sup><a href="#ftnt3" id="ftnt_ref3">[3]</a></sup> XML’s developers expanded its scope from there to try and build an entire ecosystem of XML data and XML-related standards, so XML includes many features useful for potential attackers. These include features that permit XML documents to reach out to other documents on the Web, automatically send data to Web sites, to build custom XML ‘nouns’ that XML processors must support, and add comments and special processing instructions anywhere in the document. These have all been used in security attacks on users of XML, and such attacks continue to the present day, including an attack on Internet Explorer that was publicized during the development of this paper.<sup><a href="#ftnt4" id="ftnt_ref4">[4]</a></sup></p>
+<p>XML is a highly complicated standard for data, intended to permit computers to “read into” information written by humans by defining a ‘markup’ that computers could easily understand.<sup><a href="#ftnt3" id="ftnt_ref3">[3]</a></sup> XML’s developers expanded its scope from there to try and build an entire ecosystem of XML data and XML-related standards, so XML includes many features useful for potential attackers (even as they are useful to XML users). These include features that permit XML documents to reach out to other documents on the Web, automatically send data to Web sites, to build custom XML ‘nouns’ that XML processors must support, and add comments and special processing instructions anywhere in the document. These have all been used in security attacks on users of XML, and such attacks continue to the present day, including an attack on Internet Explorer that was publicized during the development of this paper.<sup><a href="#ftnt4" id="ftnt_ref4">[4]</a></sup></p>
 <h3 id="h.zbildi9he0kg">XML: A History of Security Flaws</h3>
 
 <p>The decisions that led XML’s developers to include the features that gave it such a large ‘attack surface’ were perhaps reasonable in the relatively benign environment of the mid-1990s when XML standardization began in earnest. But these features have led to significant and widespread security issues over time, both in software that <em>uses XML at all</em>, and even in multiple XML-based standards meant to improve security of information systems.</p>
@@ -66,39 +58,39 @@ title: Sounding the &lt;DANGER/&gt; signal
 <a id="t.0"></a>
 <table class="table-text">
   <thead>
-    <tr class="c23">
+    <tr>
       <th class="c21">Vulnerability ID</th>
-      <th class="c45">XML relation</th>
+      <th class="c45">XML-specific feature</th>
       <th class="c25">Description</th>
     </tr>
   </thead>
   <tbody>
-    <tr class="c23">
+    <tr>
       <td class="c21"><a href="https://www.google.com/url?q=https://cve.mitre.org/cgi-bin/cvename.cgi?name%3DCVE-2004-0110&amp;sa=D&amp;ust=1559499944360000">CVE-2004-0110</a></td>
       <td class="c45">Web document support</td>
       <td class="c25">Failure to properly handle references to other Web documents allows an XML document to execute an attacker’s code.</td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c21"><a href="https://www.google.com/url?q=https://cve.mitre.org/cgi-bin/cvename.cgi?name%3DCVE-2006-4686&amp;sa=D&amp;ust=1559499944361000">CVE-2006-4686</a></td>
       <td class="c45">XML stylesheet</td>
       <td class="c25">Failure to safely process XML document stylesheet translation (XSLT) data allows an XML document to execute an attacker’s code.</td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c21"><a href="https://www.google.com/url?q=https://cve.mitre.org/cgi-bin/cvename.cgi?name%3DCVE-2011-1944&amp;sa=D&amp;ust=1559499944362000">CVE-2011-1944</a></td>
       <td class="c45">XML namespaces</td>
       <td class="c25">Failure to safely handle XML namespaces in an XML document allows an XML document to execute an attacker’s code.</td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c21"><a href="https://www.google.com/url?q=https://cve.mitre.org/cgi-bin/cvename.cgi?name%3DCVE-2013-0007&amp;sa=D&amp;ust=1559499944364000">CVE-2013-0007</a></td>
       <td class="c45">XML stylesheet</td>
       <td class="c25">Another failure in XML document stylesheet translation which allows malicious XML documents to execute an attacker’s code.</td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c21"><a href="https://www.google.com/url?q=https://cve.mitre.org/cgi-bin/cvename.cgi?name%3DCVE-2013-1969&amp;sa=D&amp;ust=1559499944365000">CVE-2013-1969</a></td>
       <td class="c45">XML structure</td>
       <td class="c25">Failure to safely ‘parse’ XML tags in an XML document allows the document to execute attacker’s code.</td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c21"><a href="https://www.google.com/url?q=https://cve.mitre.org/cgi-bin/cvename.cgi?name%3DCVE-2015-8710&amp;sa=D&amp;ust=1559499944366000">CVE-2015-8710</a></td>
       <td class="c45">XML comments</td>
       <td class="c25">Failure to safely ‘parse’ comments in an XML document allows the document to leak sensitive data or crash the program using the document.</td>
@@ -132,9 +124,9 @@ title: Sounding the &lt;DANGER/&gt; signal
 
 <a id="t.0b9a172d3653be692b514ee868fbac36e1f8a4e9"></a>
 <a id="t.1"></a>
-<table class="c46 table-text">
+<table class="table-text">
   <thead>
-    <tr class="c23">
+    <tr>
       <th class="c30">Cloud Service</th>
       <th class="c10">What It Does</th>
       <th class="c4">Other formats</th>
@@ -143,105 +135,105 @@ title: Sounding the &lt;DANGER/&gt; signal
     </tr>
   </thead>
   <tbody>
-    <tr class="c23">
+    <tr>
       <td class="c30">AWS Simple Storage Service (S3)</td>
       <td class="c10">Stores data and files, builds data lakes. Can filter data in some formats without a separate database to reduce cost and increase performance.</td>
       <td class="c4"><img alt="" src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c8"><img alt="" src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c26"><img alt="" src="images/image1.png" style="width: 18.67px; height: 18.67px;"/></td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c30">AWS Elastic Search</td>
       <td class="c10">Indexes, transforms, queries and visualizes “unstructured” data like Web server log files, personnel survey text, social media feeds. Uses JSON natively, other formats require custom code.</td>
-      <td class="c4"><img src="images/image1.png" style="width: 18.67px; height: 18.67px;" title=""/></td>
-      <td class="c8"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;" title=""/></td>
-      <td class="c26"><img src="images/image1.png" style="width: 18.67px; height: 18.67px;" title=""/></td>
+      <td class="c4"><img src="images/image1.png" style="width: 18.67px; height: 18.67px;"/></td>
+      <td class="c8"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
+      <td class="c26"><img src="images/image1.png" style="width: 18.67px; height: 18.67px;"/></td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c30">AWS Glue</td>
       <td class="c10">Builds data transformation pipelines that load, transform, convert data formats. Widest support of any AWS data service. <a href="https://www.google.com/url?q=https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-format.html&amp;sa=D&amp;ust=1559499944377000">XML cannot be used as output in custom PySpark jobs</a>, some XML tags cannot be used in data catalog and catalog requires custom classifier. JSON can work in data catalogs without custom classifier but is usually improved with custom classifier.</td>
       <td class="c4"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c8"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c26"><img src="images/image1.png" style="width: 18.67px; height: 18.67px;"/></td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c30">AWS Athena, AWS Redshift Spectrum</td>
       <td class="c10">Perform “serverless” database-style search of data contained in AWS S3 (see above) without building a full database first. Used to build “business intelligence” dashboards and enterprise metrics.</td>
       <td class="c4"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"></td>
       <td class="c8"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"></td>
       <td class="c26"><img src="images/image2.png" style="width: 20.33px; height: 20.33px;"></td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c30">AWS QuickSight</td>
       <td class="c10">Shows graphs and charts of data held in AWS S3, or dashboards built in AWS Athena or AWS Redshift (see above). JSON support includes JSON <em>inside of</em> CSV.</td>
       <td class="c4"><img src="images/image1.png" style="width: 18.67px; height: 18.67px;"/></td>
       <td class="c8"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c26"><img src="images/image2.png" style="width: 20.33px; height: 20.33px;"/></td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c30">AWS DynamoDB</td>
       <td class="c10">Amazon’s premiere serverless, scalable “NoSQL” database, storing “document-structured” data and semi-structured data. Although XML is document-structured, DynamoDB supports JSON, not XML. DoD can use this service in AWS GovCloud.</td>
       <td class="c4"><img src="images/image2.png" style="width: 20.33px; height: 20.33px;"/></td>
       <td class="c8"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c26"><img src="images/image2.png" style="width: 20.33px; height: 20.33px;"/></td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c30">AWS Kinesis Analytics</td>
       <td class="c10">Perform analytics on streaming data in real time (e.g. a real-time feed of personnel PCS check-ins). Requires streaming data to be in JSON or CSV format.</td>
       <td class="c4"><img src="images/image1.png" style="width: 18.67px; height: 18.67px;"/></td>
       <td class="c8"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c26"><img src="images/image2.png" style="width: 20.33px; height: 20.33px;"/></td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c30">AWS Internet of Things (IoT)</td>
       <td class="c10">AWS service supporting mobile and Internet-enabled microdevices. Can <a href="https://www.google.com/url?q=https://docs.aws.amazon.com/iot/latest/developerguide/iot-sql-select.html&amp;sa=D&amp;ust=1559499944384000">intelligently query and react to JSON data</a>, other formats are passed on.</td>
       <td class="c4"><img src="images/image1.png" style="width: 18.67px; height: 18.67px;"/></td>
       <td class="c8"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c26"><img src="images/image1.png" style="width: 18.67px; height: 18.67px;"/></td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c30">AWS Machine Learning (ML)</td>
       <td class="c10">Service to build “machine learning” models (same way we used to train spam filters before GMail). Works with AWS IoT (see above) to train models using JSON data.</td>
       <td class="c4"><img src="images/image2.png" style="width: 20.33px; height: 20.33px;"/></td>
       <td class="c8"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c26"><img src="images/image2.png" style="width: 20.33px; height: 20.33px;"/></td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c30">Amazon SageMaker</td>
       <td class="c10">AWS service to build “artificial intelligences” (AIs) for problems like predictive analysis. Uses JSON to build and train AIs, other formats require custom code.</td>
       <td class="c4"><img src="images/image1.png" style="width: 18.67px; height: 18.67px;"/></td>
       <td class="c8"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c26"><img src="images/image1.png" style="width: 18.67px; height: 18.67px;"/></td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c30">Amazon Simple Notification Service (SNS)</td>
       <td class="c10">Used for email notifications and mobile push notifications. JSON notifications support message filtering so recipients can limit to topics of interest.</td>
       <td class="c4"><img src="images/image2.png" style="width: 20.33px; height: 20.33px;"/></td>
       <td class="c8"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c26"><img src="images/image2.png" style="width: 20.33px; height: 20.33px;"/></td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c30">Azure CosmosDB</td>
       <td class="c10">Microsoft Azure’s premiere serverless, scalable “NoSQL” database, serving a wide range of data modeling needs including document-structured, semi-structured and graph databases. Supported in Azure Gov and DoD clouds.</td>
       <td class="c4"><img src="images/image2.png" style="width: 20.33px; height: 20.33px;"/></td>
       <td class="c8"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c26"><img src="images/image2.png" style="width: 20.33px; height: 20.33px;"/></td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c30">Azure Data Factory</td>
       <td class="c10">Analogous to AWS Glue, this service allows for importing data and files, converting them to different formats, and storing them elsewhere in Azure.</td>
       <td class="c4"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c8"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c26"><img src="images/image2.png" style="width: 20.33px; height: 20.33px;"/></td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c30">Azure Search</td>
       <td class="c10">Allows you to build search indexes into data stored in other Azure services like Azure Blob Storage (similar to AWS S3). Supports indexing JSON, CSV, PDF, Microsoft Office, and text content within XML files.</td>
       <td class="c4"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c8"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
       <td class="c26"><img src="images/image1.png" style="width: 18.67px; height: 18.67px;"/></td>
     </tr>
-    <tr class="c23">
+    <tr>
       <td class="c30">Google BiqQuery</td>
       <td class="c10">Allows you to build data warehouses in a serverless fashion for rapid queries. Used for this paper (see Appendix A). <a href="https://www.google.com/url?q=https://cloud.google.com/bigquery/docs/loading-data&amp;sa=D&amp;ust=1559499944393000">Uses JSON or CSV, or cloud-native formats</a>. Has format requirements for JSON.</td>
       <td class="c4"><img src="images/image4.png" style="width: 20.00px; height: 20.00px;"/></td>
@@ -260,7 +252,7 @@ title: Sounding the &lt;DANGER/&gt; signal
 <p class="figure">
 <img alt="" src="images/image5.png" style="width: 538.50px; height: 369.87px;" title=""/>
 </p>
-<p class="fig-caption"><em>Figure 2</em>: Relative proportion of StackOverflow (a popular developer reference site) questions tagged by topic over time<sup class="c15"><a href="#ftnt16" id="ftnt_ref16">[16]</a></sup></p>
+<p class="fig-caption"><em>Figure 2</em>: Relative proportion of StackOverflow (a popular developer reference site) questions tagged by topic over time<sup><a href="#ftnt16" id="ftnt_ref16">[16]</a></sup></p>
 <p>The conclusion here is stark: If we intend to use the commercial cloud, and standardize on only a single data format, that format <b>cannot be XML</b>. XML is not supported by the breadth of cloud services we are modernizing to pursue. <b>We should not standardize on <em>any</em> single data format</b> as there are significant cost and performance implications to the choice of data format across different uses cases, potentially permitting cost reductions in excess of 99%!<sup><a href="#ftnt17" id="ftnt_ref17">[17]</a></sup> OpenBridge has an example where converting data to Parquet format saved 99.7% of cloud usage and storage costs. But if we did want to pick a single format despite that, the right format would not be XML, but JSON based on its wide support amongst the cloud services appropriate to the Navy’s needs and aligned with the DoD Cloud Strategy.</p>
 
 <h2 id="h.wouh3j55p7up">IT Talent Management</h2>
@@ -292,7 +284,7 @@ title: Sounding the &lt;DANGER/&gt; signal
 <p class="figure">
 <img alt="" src="images/image7.png" style="width: 624.00px; height: 385.33px" title="XML, JSON, EXI Google search trends"/>
 </p>
-<p class="fig-caption"><em>Figure 3</em>: Google search trends for XML, JSON, and EXI formats from 1 Jan 2004 to 21 Apr 2019<sup class="c15"><a href="#ftnt23" id="ftnt_ref23">[23]</a></sup></p>
+<p class="fig-caption"><em>Figure 3</em>: Google search trends for XML, JSON, and EXI formats from 1 Jan 2004 to 21 Apr 2019<sup><a href="#ftnt23" id="ftnt_ref23">[23]</a></sup></p>
 <p>For example, at the time I write this document, the Wikipedia entry for EXI is unable to note any significant commercial usage of EXI, and in fact references DoD specifically as a potential application of EXI, citing a student thesis from the Naval Postgraduate School (NPS). Frankly, DoD should not be a significant player in the selection and use of commercial standards, given the vibrancy and strength of the U.S. and international tech sector. If DoD adoption would be significant for a commercial standard, then something has gone gravely wrong.</p>
 
 <a id="id.5tyrz0hyygv5"></a>
@@ -343,18 +335,18 @@ title: Sounding the &lt;DANGER/&gt; signal
   </ol>
 </ul>
 
-<h2>Data element interoperability</h2>
+<h2 id="data-interop">Data element interoperability</h2>
 
 <p>The desire is for interoperability at data element layer using an industry open standard with commercial software availability.</p>
 <p>My response: This is a fine requirement. It is met by XML, but also met by JSON, which is standardized as ECMA-404 and further refined as IETF RFC 8259, and which has <b>wide</b> and <b>vast</b> support in the commercial ecosystem.<sup><a href="#ftnt33" id="ftnt_ref33">[33]</a></sup> This requirement is <b>not</b> met by EXI, which is standardized (by W3C) but has a quite limited commercial ecosystem, with very few vendors and little in the way of programming language support. The lack of a JavaScript implementation is especially glaring considering the intended Web-based use case, as this effectively ensures <em>Web browsers will not be able to directly use EXI</em>.</p>
 
-<h2>Availability of XML compression</h2>
+<h2 id="xml-comp-req">Availability of XML compression</h2>
 
 <p>The desire here seems to be a requirement for availability of a W3C standardized compression ability for XML data to efficiently use limited bandwidth.</p>
 <p>My response: As stated, this is a circular requirement: “We have to use XML so that we can have standardized XML compression”. If we reword this a bit to meet the intended spirit, to ‘Availability of standardized <em>data</em> compression for data in transit, to efficiently use limited bandwidth’ then the aperture opens considerably. Although EXI outperforms typical Web-based compression methods, it’s not by a large margin. Brotli, described earlier in the paper, reaches compression parity with EXI and is standardized as RFC 7932.<sup><a href="#ftnt34" id="ftnt_ref34">[34]</a></sup> Unlike EXI, Brotli has much broader support on both the Web server side and the Web browser side. Brotli is supported by much of the Navy today, already—for XML or for JSON, though JSON will generally be even smaller.</p>
 <p>I recommend considering in this requirement how the data format will operate in today’s security landscape, where data compression of sensitive data in many contexts becomes an information leakage risk. Data compression may sometimes not be an option at all, making the <b>uncompressed</b> size of the data being transferred that much more important.</p>
 
-<h2>Security at data element level</h2>
+<h2 id="data-elem-security">Security at data element level</h2>
 
 <p>The desire here seems to be for a way to employ security all the way down to individual data elements within a document (seemingly as opposed to securing the data request at a data access interface or within a database). This requirement was tied to XML usage via SAML, and was also associated with nascent “zero trust” networks innovated by the private sector that DoD are researching.</p>
 <p>My response: This confuses several aspects about SAML, data element protection, and future “zero trust” networks. There is no requirement to use XML data to use SAML. While SAML is XML-based and intended to permit a user agent to obtain an access token to obtain services from a “service provider”, once the access token is obtained the service provider can provide any appropriate service, including services involving non-XML data or even services that don’t involve data output at all. Even when using SAML, the access token doesn’t have to be an XML-encoded token (for example the Auth0 identity and access management cloud service supports SAML but uses JSON Web Tokens for the resulting access token).<sup><a href="#ftnt35" id="ftnt_ref35">[35]</a></sup></p>
@@ -362,21 +354,21 @@ title: Sounding the &lt;DANGER/&gt; signal
 <p>The “data element” portion of this requirement appears meant to pertain to subsets of an overall XML document. SAML doesn’t provide this security, though other XML-based standards like XACML may do something similar. But given the pitfalls highly competent SAML library developers encountered trying to securely implement this very technique, it seems foolhardy to try to do better ourselves. Instead this type of security should be implemented in the database itself when required. If a traditional relational database is used, these controls are implemented using database-specific policies and commands, and apply to row- or column-level in a way that is not optimized for XML. If “NoSQL” document databases are used (which are more appropriate for the likes of XML and JSON), then the cloud-based NoSQL services we’d use only support JSON, which means we’d want to standardize on JSON to even start on meeting this requirement.</p>
 <p>The “zero trust” mention is interesting, but XML is neither here nor there as far as zero trust network design goes. The book I have on zero trust networking hardly mentions either JSON or XML, though it does give an example of a network agent (one of the concepts ‘zero trust’ introduces) using a blob of JSON data to feed into the network agent.<sup><a href="#ftnt36" id="ftnt_ref36">[36]</a></sup> It seems that JSON is at least as good as XML for zero trust networking.</p>
 
-<h2>Requirements for NSA cross-domain guards</h2>
+<h2 id="cross-domain-req">Requirements for NSA cross-domain guards</h2>
 
 <p>The intent here to to permit continued use of cross-domain data migration software to move authorized data across security classification boundaries.  The claim is that the ability to leverage NSA approved cross domain guards requires XML for the tagging, to support future large data transfer needs.</p>
 <p>My response: Given the XML-based attacks discussed elsewhere, and the incredible reach of JSON in the commercial cloud ecosystem that we are intending to use, it seems the smarter thing is to do the minor bit of development work necessary to include JSON support to the existing XML support. Especially since the “NoSQL” database services most suited to the types of data described by XML and JSON that are fully accredited for DoD use in the “government cloud” environments only support JSON.<sup><a href="#ftnt37" id="ftnt_ref37">[37]</a></sup> Given the massive amounts of data we’ll be handling, we will definitely need the help of the commercial cloud service providers, and both their NoSQL scalable databases and their data analytics services are biased towards JSON, CSV, Parquet, Apache Avro, etc. Our cross-domain solutions will have to support multiple of these data formats, not simply XML alone.</p>
 <p>In the meantime, it is not hard to convert JSON to XML. It can even be done mechanically by a script. Alternately, a scenario similar to how Microsoft Office documents use their XML data could work, with a “container format” that consists of an XML metadata tag file bundled with the JSON (or Parquet, CSV, etc.) data and the whole bundle scanned and processed as a whole.</p>
 <p>Also, if the requirement is simply to have an XML tagged file <em>about</em> the data to transfer, that imposes no requirement for format on the transferred data at all. The data could be an image, Office document, audio file, movie, JSON or XML data and still be able to attach an XML-formatted metadata file if it were necessary.</p>
 
-<h2>Prioritization of data transfers for tactical use of bandwidth</h2>
+<h2 id="data-qos">Prioritization of data transfers for tactical use of bandwidth</h2>
 
 <p>The desire is to permit commanding officers (COs) of deployed warships to intelligently use their scarce bandwidth to transfer only the bits of data they need, rather than having to transfer large files just to get the few bits that may be relevant.</p>
 
 <p>My response: Nothing in this requirement is unique to or natively supported by XML. In particluar XML offers nothing here that JSON doesn’t already support. Cloud-based analytics systems that can filter or subset JSON data <em>already can do this today</em>, but this support is not available for XML-based data. Today’s ship COs can already prioritize tactical traffic and de-prioritize things like video data or non-critical web sites, even though these web sites aren’t using XML for the Web page content or video.</p>
 <p>Given the context here, COs would be more likely to be “ordering up” individual types of data records that are tagged, not specific data elements within specific data records or data sets. In this environment the records could be any suitable data format (JSON, XML, images, video, PDFs, documents, etc.). This is more applicable to bulk storage like AWS S3 and Azure Blob Storage. Note that AWS’s Simple Storage Service (S3) supports natively ‘ordering up’ bulk data, but only if the bulk data is JSON.</p>
 
-<h2>Coalition Interoperability</h2>
+<h2 id="nato-interop">Coalition Interoperability</h2>
 
 <p>Another consideration that has been put forward is coalition interoperability, for NATO and others using XML.</p>
 
@@ -397,32 +389,8 @@ title: Sounding the &lt;DANGER/&gt; signal
 
 <p style="margin-top: 24pt;"><em><b>Disclaimer:</b></em> The opinions contained within this paper are my own personal opinions, and do not represent the official position of any government, DoD, or Navy activity.</p>
 
-<h1 id="h.c7jmb5tvy9og">Cloud References</h1>
+<hr class="sec-separator"/>
 
-<ul>
-  <li>AWS S3 Select: <a href="https://www.google.com/url?q=https://docs.aws.amazon.com/AmazonS3/latest/dev/selecting-content-from-objects.html&amp;sa=D&amp;ust=1559499944409000">https://docs.aws.amazon.com/AmazonS3/latest/dev/selecting-content-from-objects.html</a> (ties to AWS Elastic Map Reduce Big Data service offering)</li>
-  <li>AWS Kinesis Analytics: <a href="https://www.google.com/url?q=https://docs.aws.amazon.com/kinesisanalytics/latest/dev/sch-mapping.html&amp;sa=D&amp;ust=1559499944409000">https://docs.aws.amazon.com/kinesisanalytics/latest/dev/sch-mapping.html</a></li>
-  <li>AWS Internet of Things (IoT) queries across JSON data sent from IoT devices: <a href="https://www.google.com/url?q=https://docs.aws.amazon.com/iot/latest/developerguide/iot-sql-select.html&amp;sa=D&amp;ust=1559499944410000">https://docs.aws.amazon.com/iot/latest/developerguide/iot-sql-select.html</a></li>
-  <li>Using AWS IoT to train AWS Machine Learning (ML) Models (JSON data) <a href="https://www.google.com/url?q=https://docs.aws.amazon.com/iot/latest/developerguide/iot-sql-functions.html%23iot-sql-function-machine-learning&amp;sa=D&amp;ust=1559499944410000">https://docs.aws.amazon.com/iot/latest/developerguide/iot-sql-functions.html#iot-sql-function-machine-learning</a></li>
-  <li>AWS ElasticSearch indexing of JSON data: <a href="https://www.google.com/url?q=https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-indexing.html&amp;sa=D&amp;ust=1559499944410000">https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-indexing.html</a></li>
-  <li>AWS Athena and AWS Redshift Spectrum (which provide standard database query ability on S3 data without having to first build a database) uses Avro, CSV, JSON, ORC, Parquet and more, but not XML. <a href="https://www.google.com/url?q=https://aws.amazon.com/athena/faqs/?nc%3Dsn%26loc%3D6&amp;sa=D&amp;ust=1559499944411000">https://aws.amazon.com/athena/faqs/?nc=sn&amp;loc=6</a></li>
-  <li>AWS QuickSight, which provides the ability to build dashboards for data housed in the AWS cloud customer’s data environment, supports JSON, CSV and even Microsoft Excel, but not XML. QuickSight even supports JSON <em>inside</em> of CSV. See <a href="https://www.google.com/url?q=https://docs.aws.amazon.com/quicksight/latest/user/supported-data-sources.html&amp;sa=D&amp;ust=1559499944411000">https://docs.aws.amazon.com/quicksight/latest/user/supported-data-sources.html</a>.</li>
-  <li>Apache Hive, the underlying software that powers scalable data analytics offered by major cloud providers, offers native support for many data formats including Avro, Parquet, ORC, JSON and CSV. But XML requires custom code to be provided by the Hive user. See <a href="https://www.google.com/url?q=https://cwiki.apache.org/confluence/display/Hive/DeveloperGuide%23DeveloperGuide-HiveSerDe&amp;sa=D&amp;ust=1559499944412000">https://cwiki.apache.org/confluence/display/Hive/DeveloperGuide#DeveloperGuide-HiveSerDe</a></li>
-  <li>AWS Glue provides a data catalog and data conversion pipeline to load, clean and store data. It has the widest support for data and file formats of any AWS data-related service, including support for understanding simple subsets of XML. Glue does <b>not</b> support XML as an output format, though it does support JSON, Avro, and others.</li>
-</ul>
-
-<h1 id="h.4whldb3rgum1">Appendix A—Web page request analysis</h1>
-
-<p>The statistics presented in the executive summary and the document text regarding XML usage is based on data collected by Google from anonymous usage statistics gathered by their popular Google Chrome web browser, accessible from HTTP Archive at <a href="https://www.google.com/url?q=https://httparchive.org/&amp;sa=D&amp;ust=1559499944412000">https://httparchive.org</a></p>
-<p>The HTTP Archive provides examples of how to use Google Cloud Platform’s scalable data analytics platform, “Google BigQuery”, to conduct analyses of large datasets, including a dataset of 2.48 gigabytes of JSON data compiled from 3,447,061 separate instances of loading a full Web page, named “<tt>httparchive.latest.summary_pages_desktop</tt>” and current as of 28 Feb 2019. Each individual loading event can consist of dozens or hundreds of separate network requests, all of which are aggregated into a single ‘Web page request’ in the data.</p>
-<p>HTTP Archive provides an introduction on how to get started analysis their data at <a href="https://www.google.com/url?q=https://github.com/HTTPArchive/httparchive.org/blob/master/docs/gettingstarted_bigquery.md&amp;sa=D&amp;ust=1559499944413000">https://github.com/HTTPArchive/httparchive.org/blob/master/docs/gettingstarted_bigquery.md</a></p>
-<p>My analysis used this introduction as a base.</p>
-<p>The “median” web size statistics were determined for each category of data type independently, ordering by the size in bytes of the data in the data type (e.g. the “median” web page for PNG images might be a different web page than the “median” web page for HTML data). Performing this analysis across the full dataset of 3.4 million page loads provided the data used in <a href="#id.5tyrz0hyygv5">the EXI discussion</a>. The query used for the analysis is available at <a href="https://www.google.com/url?q=https://console.cloud.google.com/bigquery?sq%3D368182082215:5bba02098080494d944bdb372009b55e&amp;sa=D&amp;ust=1559499944413000">https://console.cloud.google.com/bigquery?sq=368182082215:5bba02098080494d944bdb372009b55e</a></p>
-<p>Filtering the data set to pages that loaded at least one byte of XML (or one byte of SVG, which is XML-based but tracked separately by Google) reveals that 870,760 pages (or 25%) resulted in at least one byte of XML being loaded, including SVG as XML. Or in other words, 75% of all web pages use no XML whatsoever. Of this 25% of pages using XML, the median Web page used 3,418 bytes of SVG image data and 0 bytes of ‘raw’ XML. The query used for this analysis is available at <a href="https://www.google.com/url?q=https://console.cloud.google.com/bigquery?sq%3D368182082215:3f4f2c6abe364fdd8cd4b5b6295d29d1&amp;sa=D&amp;ust=1559499944414000">https://console.cloud.google.com/bigquery?sq=368182082215:3f4f2c6abe364fdd8cd4b5b6295d29d1</a></p>
-<p>Filtering the data set of Web pages to pages that used XML for ‘business data’ of some sort (as opposed to imagery), by assuming that <em>any</em> usage of ‘raw’ XML is for business data gave the figure of 4.4% of Web sites using XML. The query used for this analysis is available at <a href="https://www.google.com/url?q=https://console.cloud.google.com/bigquery?sq%3D368182082215:2a6ff6668b144a48b6495d2e42be3fba&amp;sa=D&amp;ust=1559499944414000">https://console.cloud.google.com/bigquery?sq=368182082215:2a6ff6668b144a48b6495d2e42be3fba</a></p>
-<p>Note that all of these analyses allow you to export the data results as JSON, but not XML.</p>
-
-<hr class="c51"/>
 <h1 id="hdr_footnotes">Footnotes</h1>
 <div class="footnotes txt-small">
   <p><a href="#ftnt_ref1" id="ftnt1">[1]</a> See <a href="https://www.google.com/url?q=https://www.public.navy.mil/bupers-npc/reference/messages/Documents/NAVADMINS/NAV2018/nav18315.txt&amp;sa=D&amp;ust=1559499944415000">NAVADMIN 315/18</a>.</p>
@@ -465,3 +433,60 @@ title: Sounding the &lt;DANGER/&gt; signal
   <p><a href="#ftnt_ref38" id="ftnt38">[38]</a> See <a href="https://www.google.com/url?q=https://github.com/18F/api-standards%23just-use-json&amp;sa=D&amp;ust=1559499944430000">https://github.com/18F/api-standards#just-use-json</a> and <a href="https://www.google.com/url?q=https://developer.va.gov/explore/health/docs/argonaut&amp;sa=D&amp;ust=1559499944430000">https://developer.va.gov/explore/health/docs/argonaut</a> some examples</p>
   <p><a href="#ftnt_ref39" id="ftnt39">[39]</a> See <a href="https://www.google.com/url?q=https://www.w3.org/2003/08/binary-interchange-workshop/40-BrutzmanXmlBinarySerializationUsingXfspW3cWorkshopSeptember2003.pdf&amp;sa=D&amp;ust=1559499944422000">https://www.w3.org/2003/08/binary-interchange-workshop/40-BrutzmanXmlBinarySerializationUsingXfspW3cWorkshopSeptember2003.pdf</a> when NPS started work on binary XML compression.</p>
 </div>
+
+<h1 id="h.4whldb3rgum1">Appendix A—Web page request analysis</h1>
+
+<p>The statistics presented in the executive summary and the document text regarding XML usage is based on data collected by Google from anonymous usage statistics gathered by their popular Google Chrome web browser, accessible from HTTP Archive at <a href="https://www.google.com/url?q=https://httparchive.org/&amp;sa=D&amp;ust=1559499944412000">https://httparchive.org</a></p>
+<p>The HTTP Archive provides examples of how to use Google Cloud Platform’s scalable data analytics platform, “Google BigQuery”, to conduct analyses of large datasets, including a dataset of 2.48 gigabytes of JSON data compiled from 3,447,061 separate instances of loading a full Web page, named “<tt>httparchive.latest.summary_pages_desktop</tt>” and current as of 28 Feb 2019. Each individual loading event can consist of dozens or hundreds of separate network requests, all of which are aggregated into a single ‘Web page request’ in the data.</p>
+<p>HTTP Archive provides an introduction on how to get started analysis their data at <a href="https://www.google.com/url?q=https://github.com/HTTPArchive/httparchive.org/blob/master/docs/gettingstarted_bigquery.md&amp;sa=D&amp;ust=1559499944413000">https://github.com/HTTPArchive/httparchive.org/blob/master/docs/gettingstarted_bigquery.md</a></p>
+<p>My analysis used this introduction as a base.</p>
+<p>The “median” web size statistics were determined for each category of data type independently, ordering by the size in bytes of the data in the data type (e.g. the “median” web page for PNG images might be a different web page than the “median” web page for HTML data). Performing this analysis across the full dataset of 3.4 million page loads provided the data used in <a href="#id.5tyrz0hyygv5">the EXI discussion</a>. The query used for the analysis is available at <a href="https://www.google.com/url?q=https://console.cloud.google.com/bigquery?sq%3D368182082215:5bba02098080494d944bdb372009b55e&amp;sa=D&amp;ust=1559499944413000">https://console.cloud.google.com/bigquery?sq=368182082215:5bba02098080494d944bdb372009b55e</a></p>
+<p>Filtering the data set to pages that loaded at least one byte of XML (or one byte of SVG, which is XML-based but tracked separately by Google) reveals that 870,760 pages (or 25%) resulted in at least one byte of XML being loaded, including SVG as XML. Or in other words, 75% of all web pages use no XML whatsoever. Of this 25% of pages using XML, the median Web page used 3,418 bytes of SVG image data and 0 bytes of ‘raw’ XML. The query used for this analysis is available at <a href="https://www.google.com/url?q=https://console.cloud.google.com/bigquery?sq%3D368182082215:3f4f2c6abe364fdd8cd4b5b6295d29d1&amp;sa=D&amp;ust=1559499944414000">https://console.cloud.google.com/bigquery?sq=368182082215:3f4f2c6abe364fdd8cd4b5b6295d29d1</a></p>
+<p>Filtering the data set of Web pages to pages that used XML for ‘business data’ of some sort (as opposed to imagery), by assuming that <em>any</em> usage of ‘raw’ XML is for business data gave the figure of 4.4% of Web sites using XML. The query used for this analysis is available at <a href="https://www.google.com/url?q=https://console.cloud.google.com/bigquery?sq%3D368182082215:2a6ff6668b144a48b6495d2e42be3fba&amp;sa=D&amp;ust=1559499944414000">https://console.cloud.google.com/bigquery?sq=368182082215:2a6ff6668b144a48b6495d2e42be3fba</a></p>
+<p>Note that all of these analyses allow you to export the data results as JSON, but not XML.</p>
+
+<h2>Table of Contents</h2>
+
+<p>This article was organized into the following sections:</p>
+
+<nav>
+<ul>
+<li><a href="#h.est1er72csq6">Executive Summary</a></li>
+<li><a href="#h.2c2z4kmgqzri">Introduction</a></li>
+<ul>
+<li><a href="#h.5jdfltgcg9an">Brief Interlude on XML</a></li>
+</ul>
+<li><a href="#h.725jw9ieg8rr">The Problems with the XML Mandate</a></li>
+<ul>
+<li><a href="#h.5cvn6ljnzqky">Cybersecurity</a></li>
+<ul>
+<li><a href="#h.zbildi9he0kg">XML: A History of Security Flaws</a></li>
+<li><a href="#h.lbyp0td8iuxt">SAML: Undermined by XML</a></li>
+<li><a href="#h.bjvff8i7ffp2">SAML Part II: XML Strikes Again</a></li>
+<li><a href="#h.g7sllurbldgl">Even the “Pros” Can’t Safely Use XML</a></li>
+</ul>
+<li><a href="#h.617xpe6pnxb4">Commercial Cloud Support</a></li>
+<li><a href="#h.wouaj55p7up">IT Talent Management</a></li>
+<li><a href="#h.xz6dvpts6jug">XML Doesn’t Solve Data Standards</a></li>
+<ul>
+<li><a href="#h.3gswrohe48jz">Federal Guidance and Other Stakeholders</a></li>
+</ul>
+<li><a href="#h.5rtzashin05a">DoD-Proprietary XML Compression</a></li>
+<ul>
+<li><a href="#h.wg7vyadpm8il">Cybersecurity risks from data compression</a></li>
+</ul>
+</ul>
+<li><a href="#h.cdec86gb0aay">Addressing pro-mandate Arguments</a></li>
+<ul>
+<li><a href="#data-interop">Data element interoperability</a></li>
+<li><a href="#xml-comp-req">Availability of XML compression</a></li>
+<li><a href="#data-elem-security">Security at data element level</a></li>
+<li><a href="#cross-domain-req">Requirements for NSA cross-domain guards</a></li>
+<li><a href="#data-qos">Prioritization of data transfers for tactical use of bandwidth</a></li>
+<li><a href="#nato-interop">Coalition Interoperability</a></li>
+</ul>
+<li><a href="#h.pp92b5lfxwan">Conclusion</a></li>
+<li><a href="#hdr_footnotes">Footnotes</a></li>
+<li><a href="#h.4whldb3rgum1">Appendix A—Web page request analysis</a></li>
+</ul>
+</nav>
