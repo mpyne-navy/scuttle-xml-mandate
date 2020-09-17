@@ -6,7 +6,7 @@ which laid out a plan to help the Navy migrate its IT footprint (on land and at
 sea) to cloud technologies and methodologies. The Navy inserted a separate
 mandate in this message, called out as its first of Four Key Pillars:
 _Standardize all data onto XML_. And not only "standardize on XML", but do that
-as a way of enforcing adoption of a format called EXI.[^xml]
+as a way of enforcing adoption of a format called EXI.[^1]
 
 Even had this been released in 2003, it would have been a bad idea. But it was
 2018, "the cloud" was the reason to do this all, and we had learned a great
@@ -28,4 +28,4 @@ location](https://mpyne-navy.github.io/scuttle-xml-mandate/other)
 Though I have not run into many things that refute or contradict my paper, I
 would also throw them here if I should run into anything.
 
-[^xml]: EXI used to be "Efficient XML Interchange" but by the time Navy got around to picking it up in 2018 was renamed "Efficient eXtensible Interchange". If that doesn't make my own point about the legacy nature XML, I'm not sure what does.
+[^1]: EXI used to be "Efficient XML Interchange" but by the time Navy got around to picking it up in 2018 was renamed "Efficient eXtensible Interchange". If that doesn't make my own point about the legacy nature XML, I'm not sure what does.
