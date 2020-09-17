@@ -8,6 +8,15 @@ I sometimes run into other related references that would be useful if I ever upd
 paper (so don't want to forget), but don't want to try to merge uncleanly back into
 the paper. So I'll keep them off to the side, on this page.
 
+* WorkOS posted a [thorough description of security issues in SAML](https://workos.com/blog/fun-with-saml-sso-vulnerabilities-and-footguns),
+  much better written than [my documents](index.html) and which includes
+  coverage of at least 4 separate major SAML security vulnerabilities that have
+  been release since I wrote my paper. I predicted that there would be
+  vulnerabilities in SAML deployments, but this article provides very good
+  description about how and why these keep happening. WorkOS is a company that
+  provides single sign-on as a service so getting things like SAML and OpenID
+  Connect right is their bread-and-butter, so they have good insight as to why
+  SAML is so hard to get right.
 * https://ws-attacks.org/ has an extensive (but high-level) listing of many
   security attacks on the various Web Service (WS-\*) standards. Many (though
   not all) involve XML, and many of those involve things peculiar to XML.
