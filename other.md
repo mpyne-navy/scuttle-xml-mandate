@@ -3,10 +3,12 @@ layout: default
 title: Other References
 permalink: /other/
 ---
+# Addenda to the main paper
 
-I sometimes run into other related references that would be useful if I ever update the
-paper (so don't want to forget), but don't want to try to merge uncleanly back into
-the paper. So I'll keep them off to the side, on this page.
+I sometimes run into other related references that would be useful if I ever update
+[the paper](index.html). I don't want to forget that these are pertinent, but I
+also don't want to try to merge uncleanly back into the paper. So I'll keep
+them off to the side, on this page.
 
 * WorkOS posted a [thorough description of security issues in SAML](https://workos.com/blog/fun-with-saml-sso-vulnerabilities-and-footguns),
   much better written than [my documents](index.html) and which includes
