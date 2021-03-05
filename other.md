@@ -13,15 +13,16 @@ them off to the side, on this page.
 * WorkOS posted a [thorough description of security issues in SAML](https://workos.com/blog/fun-with-saml-sso-vulnerabilities-and-footguns),
   much better written than [my documents](index.html) and which includes
   coverage of at least 4 separate major SAML security vulnerabilities that have
-  been release since I wrote my paper. I predicted that there would be
-  vulnerabilities in SAML deployments, but this article provides very good
+  been released since I wrote my paper. I predicted that there would be
+  vulnerabilities in SAML deployments, but this article provides a very good
   description about how and why these keep happening. WorkOS is a company that
   provides single sign-on as a service so getting things like SAML and OpenID
   Connect right is their bread-and-butter, so they have good insight as to why
   SAML is so hard to get right.
-* https://ws-attacks.org/ has an extensive (but high-level) listing of many
-  security attacks on the various Web Service (WS-\*) standards. Many (though
-  not all) involve XML, and many of those involve things peculiar to XML.
+* [https://ws-attacks.org/](https://ws-attacks.org/) has an extensive (but
+  high-level) listing of many security attacks on the various Web Service
+  (WS-\*) standards. Many (though not all) involve XML, and many of those
+  involve things peculiar to XML.
 * Amazon Web Services's EC2 and S3 services [were attacked on their SOAP
   endpoints](https://www.nds.ruhr-uni-bochum.de/media/nds/veroeffentlichungen/2011/10/22/AmazonSignatureWrapping.pdf)
   in a 2011 paper by using XML ecosystem mis-features to forge valid signatures
