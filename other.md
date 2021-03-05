@@ -10,6 +10,31 @@ I sometimes run into other related references that would be useful if I ever upd
 also don't want to try to merge uncleanly back into the paper. So I'll keep
 them off to the side, on this page.
 
+* In Dec 2020, [Mattermost posted about security vulnerabilities in SAML
+  implementations across the modern Go
+  ecosystem](https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/),
+  due to the difficulty in parsing XML in a way that meets the security needs
+  of SAML. As they put it:
+
+  > The core issue is the same in all three [vulnerabilities]: maliciously
+  > crafted XML markup mutates during round-trips through Go’s decoder and
+  > encoder implementations. ... There are applications that absolutely require
+  > semantic integrity in XML in order to be secure — a major example being
+  > SAML.
+
+  * As a result of months of work that left Go users still unable to securely use
+  XML from the Go standard library, the author of a Go implementation of SAML
+  [had this to say](https://news.ycombinator.com/item?id=25424267):
+
+    > People need to stop using SAML. ... for reasons which are irrelevant to
+    > modern implementations, XML [Digital Signature] prefers to stuff the
+    > signature metadata back inside the XML document that was just signed.
+    > ... Obviously this is a crazy approach to one of the most
+    > security-critical parts of an application on the internet, and it breaks
+    > all the time. Unfortunately people persist in using this fundamentally
+    > broken protocol, so huge thank you to the team at Mattermost for their
+    > research in this area.
+
 * WorkOS posted a [thorough description of security issues in SAML](https://workos.com/blog/fun-with-saml-sso-vulnerabilities-and-footguns),
   much better written than [my documents](index.html) and which includes
   coverage of at least 4 separate major SAML security vulnerabilities that have
