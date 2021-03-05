@@ -1,7 +1,7 @@
 # Overview
 
 In 2018, the U.S. Navy released an administrative message, [NAVADMIN
-315/18](https://www.public.navy.mil/bupers-npc/reference/messages/Documents/NAVADMINS/NAV2018/nav18315.txt),
+315/18](https://www.mynavyhr.navy.mil/Portals/55/Messages/NAVADMIN/NAV2018/NAV18315.txt),
 which laid out a plan to help the Navy migrate its IT footprint (on land and at
 sea) to cloud technologies and methodologies. The Navy inserted a separate
 mandate in this message, called out as its first of Four Key Pillars:
