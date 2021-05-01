@@ -10,6 +10,19 @@ I sometimes run into other related references that would be useful if I ever upd
 also don't want to try to merge uncleanly back into the paper. So I'll keep
 them off to the side, on this page.
 
+* In Apr 2021, the [Ruby language XML parser was
+  updated](https://www.ruby-lang.org/en/news/2021/04/05/xml-round-trip-vulnerability-in-rexml-cve-2021-28965/)
+  due to XML-specific round-trip vulnerabilities, which could cause
+  applications using XML to perform insecure actions depending on the
+  application context. This is analogous to the Mattermost issue mentioned
+  below, but for Ruby language instead of Go language.
+* Likewise in April 2021, the popular Wordpress Web content management system
+  was found to be vulnerable to XML External Entity attack when running on PHP
+  8 language, because PHP 8 added support for reading information about media
+  files. Some media files support XML-based metadata, but PHP 8 did not read
+  this XML information with safe parser settings, [leading to information about
+  the Wordpress server being sent to an
+  attacker](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-rv47-pc52-qrhh).
 * In Dec 2020, [Mattermost posted about security vulnerabilities in SAML
   implementations across the modern Go
   ecosystem](https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/),
