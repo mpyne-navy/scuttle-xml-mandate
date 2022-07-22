@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "~> 2.6"
+#ruby "~> 2.6"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -21,6 +21,9 @@ gem "github-pages", group: :jekyll_plugins
 # Needed for Jekyll but for some reason bundler doesn't pick up that jekyll
 # needs it.
 gem "json"
+
+# Likewise
+gem "webrick"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
