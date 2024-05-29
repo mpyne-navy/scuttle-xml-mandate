@@ -25,6 +25,8 @@ gem "json"
 # Likewise
 gem "webrick"
 
+gem "psych", "< 5.0.0" # Ruby 3.1 has a conflict with its default psych??
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
